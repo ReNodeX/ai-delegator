@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Environment files (contain sensitive data)
+.env
+.env.local
+.env.*.local
+sender/.env
+
+# Runtime data
+messages_for_sender.json
+sender/database.json
+sender/json_scanner_progress.json
+sender/sender_checkpoint.json
+sender/sent_contacts.json
+
+# Logs
+*.log
+logs/
+pino-*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Debug
+npm-debug.log*
+
+# Optional: PM2
+.pm2/
+
+# Build artifacts
+dist/
+build/

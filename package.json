@@ -1,0 +1,43 @@
+{
+  "name": "parser-delegator",
+  "version": "2.0.0",
+  "description": "Telegram lead parser with OpenAI classification",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "chcp 65001 >nul 2>&1 & node --max-old-space-size=2048 src/app.js run",
+    "start:unix": "node --max-old-space-size=2048 src/app.js run",
+    "dry-run": "chcp 65001 >nul 2>&1 & node --max-old-space-size=2048 src/app.js dry-run",
+    "login": "chcp 65001 >nul 2>&1 & node --max-old-space-size=2048 src/login.js",
+    "dev": "chcp 65001 >nul 2>&1 & node --max-old-space-size=2048 --watch src/app.js run",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\""
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "openai": "^5.22.0",
+    "p-queue": "^8.0.1",
+    "pino": "^9.10.0",
+    "telegram": "^2.10.10",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "pino-pretty": "^13.1.1",
+    "prettier": "^3.1.1"
+  },
+  "keywords": [
+    "telegram",
+    "parser",
+    "openai",
+    "leads"
+  ],
+  "author": "Parser Delegator",
+  "license": "MIT"
+}
